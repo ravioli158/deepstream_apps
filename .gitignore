@@ -1,0 +1,72 @@
+# ==================================
+# Python Specific
+# ==================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.env
+
+# ==================================
+# DeepStream & TensorRT Specific
+# ==================================
+# Generated TensorRT Engine files (These are hardware-specific and shouldn't be shared)
+*.engine
+*.trt
+*.plan
+
+# DeepStream model cache and log files
+*.cache
+*b1_gpu0*
+*b*_gpu*
+*.log
+deepstream-*.dot
+
+# ==================================
+# Deep Learning Model Weights
+# ==================================
+# Ignore raw model files (store these in DVC/MinIO instead of Git)
+*.onnx
+*.pt
+*.pth
+*.weights
+*.pb
+*.caffemodel
+*.h5
+*.hdf5
+*.tflite
+
+# ==================================
+# Media & Dataset Output
+# ==================================
+# Ignore input videos and generated outputs
+*.mp4
+*.avi
+*.mkv
+*.h264
+*.h265
+*.jpeg
+*.jpg
+*.png
+output/
+frames/
+
+# ==================================
+# System & IDE
+# ==================================
+.DS_Store
+.idea/
+.vscode/
+*.swp
+# Virtual Environments generated during DeepStream setup
+pyds/
+bindings/build/
+bindings/dist/
+bindings/pyds.egg-info/
+
