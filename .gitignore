@@ -41,6 +41,7 @@ deepstream-*.dot
 *.h5
 *.hdf5
 *.tflite
+*.onxx
 
 # ==================================
 # Media & Dataset Output
@@ -54,6 +55,8 @@ deepstream-*.dot
 *.jpeg
 *.jpg
 *.png
+*.mov
+*.wav
 output/
 frames/
 
