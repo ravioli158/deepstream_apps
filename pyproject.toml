@@ -1,0 +1,23 @@
+[project]
+name = "deepstream-apps"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyds",
+    "pygobject>=3.56.1",
+    "cuda-python",
+]
+
+[tool.uv.sources]
+pyds = { path = "bindings/pyds-1.2.2-cp312-cp312-linux_x86_64.whl" }
+
+[tool.setuptools.packages.find]
+where = ["apps"]
+include = ["common*"]
+
+[dependency-groups]
+dev = [
+    "pygobject-stubs>=2.16.0",
+]

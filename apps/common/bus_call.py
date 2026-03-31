@@ -18,8 +18,8 @@
 import gi
 import sys
 gi.require_version('Gst', '1.0')
-from gi.repository import Gst
-def bus_call(bus, message, loop):
+from gi.repository import Gst, GLib
+def bus_call(bus: Gst.Bus, message: Gst.Message, loop: GLib.MainLoop):
     t = message.type
     if t == Gst.MessageType.EOS:
         sys.stdout.write("End-of-stream\n")

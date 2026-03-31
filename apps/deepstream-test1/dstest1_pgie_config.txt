@@ -55,11 +55,12 @@
 [property]
 gpu-id=0
 net-scale-factor=0.00392156862745098
-onnx-file=../../samples/models/Primary_Detector/resnet18_trafficcamnet_pruned.onnx
-model-engine-file=../../samples/models/Primary_Detector/resnet18_trafficcamnet_pruned.onnx_b1_gpu0_fp16.engine
-labelfile-path=../../samples/models/Primary_Detector/labels.txt
-int8-calib-file=../../samples/models/Primary_Detector/cal_trt.bin
+onnx-file=/opt/nvidia/deepstream/deepstream-8.0/samples/models/Primary_Detector/resnet18_trafficcamnet_pruned.onnx
+model-engine-file=/opt/nvidia/deepstream/deepstream-8.0/samples/models/Primary_Detector/resnet18_trafficcamnet_pruned.onnx_b1_gpu0_fp16.engine
+labelfile-path=/opt/nvidia/deepstream/deepstream-8.0/samples/models/Primary_Detector/labels.txt
+int8-calib-file=/opt/nvidia/deepstream/deepstream-8.0/samples/models/Primary_Detector/cal_trt.bin
 batch-size=1
+# Test1 omits this parameter, DeepStream implicitly falls back to the default value of  1 , meaning both configurations act as primary detectors.
 network-mode=2
 num-detected-classes=4
 interval=0
